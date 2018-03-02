@@ -1,0 +1,259 @@
+Useful Tags
+-----------
+def             definition; usually alongside <hw> (sometimes within <def2>)
+as              example (as in); always inside <def>
+ant             antonym word; always inside <def>
+p               Paragraph tag; closed only once! never in collocations
+                Useful in identifying the beginning of first definition <b>1.</b>.
+def2            a second/thrid definition
+
+col             collocation (should be indexed)
+mcol            multiple collocations, usually those that share a definition
+cd              collocation definition (similar to def)
+                always alongside <col> or <mcol> or <stype>
+cs              collocation segment (similar to p for def, but always closed)
+cref            collocation reference (should be hyperlinked)
+ex              example word; usually inside <as> or <note>
+
+abbr            abbreviation; just the abbreviated part (should be indexed)
+altname         alternative name, usually for plants/animals (could be indexed)
+altnpluf        same as altname, but plural; appears once in "Premonstratensian"
+altsp           alternate spelling description; alongside <def>, but never inside
+asp             alternate spelling word; always inside <altsp>
+contr           contrasting word/collocation; always inside <def> or <cd> (or <cs>)
+er              entry reference; just the word (should be hyperlinked)
+ety             etymology; always surrounds square brackets, and beside <def>
+ets             etymological source word; always within <ety>
+fld             field of specialization; alongside, before <def> or <cd>, but never inside
+grk             transliteration of greek
+h1              main word (should be indexed); top-level
+hw              headword; denotes an entry followed by definitions
+                mostly followed by <tt> tag to denote part-of-speech
+                top-level, does not contain nested tag, multiple may appear in a line
+                many stray unclosed <hw> tags were found
+mhw             multiple headwords; followed by an <h1> tag containing multiple words
+                marker tag (unclosed); parsing of <h1> would be tricky for indexing
+mark            usage mark; usually follows a <def> or <altsp>, or follows/within <cd>
+mord            morphological derivation
+note            explanatory notes; may span multiple paragraphs; top-level
+part            conceptual part of the headword; appears once in "Type 5." (confusing)
+plu             plural; always starts with "pl."; alongside <def>
+plw             plural word; always inside <plu> (should be indexed)
+pluf            plural form; only contains "pl." -- marks an entry plural
+ptcl            verb particle; only a few are marked
+sd              sub-definition number, should be alongside <def> or <cd> or <stype>
+                but sometimes within <def> or <cd> (need to be corrected?)
+see             references; appears once in "Age 7. <cs>"
+sing            singular; always starts with "sing." alongside <def>
+singw           singular word; always inside <sing> (should be indexed)
+singf           singular form; only contains "sing." -- marks an entry singular
+stype           conceptual subtypes of the headword (could be indexed)
+syn             synonyms; usually contains <er> fields inside
+                          usually followed by <usage>
+usage           comparisons of comparable/confusable words usage; usually alongside <syn>
+uex             usage example; only within <usage> (replace with <i>?); appears thrice
+wordforms       morphological derivatives
+
+b               bold; usually for numbering definitions (doing <sn> tags' job)
+bold            bold; usually inside note tag (also in cs tag and the like?)
+chform          chemical formula; numbers should be rendered in subscript
+chreact         chemical reaction; appears 5 times (remove?)
+colf            collocation font, not collocation; appears only in "un-"
+fexp            functional expression; appears once in "Function 5." (remove?)
+funct           mathematical function; appears once in "Inverse 3." (replace with <mathex>)
+sps             exponent; appears once inside <funct> (replace with <exp>)
+it              italic; usually to demarcate a word in an example
+i               italic; usually to demarcate an author of a quote
+mathex          mathematical expression; appears in ~49 entries
+  exp           exponent; always(?) inside <mathex>
+  fract         fraction; usually not inside <mathex>
+  ratio         ratio; appears twice, both wrong (replace with <fract>)
+  root          square root; appears once in "Unit 5."
+  vinc          vinculum -- bar extending over the expression; appears once in "Vinculum"
+musfig          music figure; appears once in "Figure"
+nul             same as <plain> ?? appears once in "Conceit"
+plain           plain font; used within other formatted tag
+ref             reference; only appears in "Grave" should be replaced with <er>
+rj              right-justified; usually to name author of a quote
+sc              small caps -- usually to denote AD/BC or AM/PM
+spn             species or genus or order or family name (bio)
+  subclass      taxonomic subclass name; appears once in "Vegetable kingdom"
+  varn          variety, below the level of species
+subtypes        subtypes of the headword, appears thrice
+subs            subscript -- appears in 3 defs
+sups            superscript -- appears in 2 main words and headwords, and in a def
+supr            supra -- appears once (musical notation)
+sansserif       sans-serif font -- appears once
+tt              teletype font -- usually to denote part of speech
+universbold     used to describe shapes such as Y T X etc.
+xlati           translation; appears twice (replace with <i>)
+<-- ... -->     comments for the developer
+
+Errors
+------
+'<wordforms><wf>[^<]*</hw>'   4
+'<tt>or</tt>'                 5
+'<pluf>[^p]|<singf>[^s]'      4
+'[^.]</(pluf|singf)>'         5
+'<col>[^ -<]*</col>'        547 (part of a phrase marked as independent; index fucked!
+                                 quickfix: use a single <col> to wrap the whole thing)
+', <wf>.</wf>\.'              2 (that which should be in <tt>)
+'</wf>[^, .]'                10 (not all errors)
+'See <wf>'                   22 (all of them outside <wordforms>)
+'\.</tt> *<wf>'              10 (<wf> should be followed by ", <tt>" and separated by "--")
+'</def>[^<]*</def>'          19 (bad </def> closing)
+'</def2> *<mark>'            27 (<mark> should be inside <def2> alongside <def>)
+'\- *<usage>'                22 (hyphens should be inside <usage>?)
+'</sd> [^<]'                395 (most likely, <sd> inside <def> or <cd>, should be beside.
+                                 usually because <def> started with "Specifically" or
+                                 "Hence". Let these words move out of <def> in such cases.
+                                 Allow <sd>-<def>s in addition to a "main" <def>)
+'<syn>[^<>]*</syn>'        2039 (no refs in <syn>)
+'Needs proof-reading'        68
+
+To be ignored/deleted
+---------------------
+hr              ignore line; followed by <page=*> in next line
+page=*          also ignore the line below (Page *<p>)
+Xpage=*         ignore line
+caption         caption of figure or table; ignore contents
+figref          figure reference; delete nearby sentences too (3 occurrences)
+iref            illustration reference; delete nearby sentences too (2 occurrences)
+matrix*         appears 6 times; ignore contents
+<item> <row> <boxtype>
+
+Unused Tags
+-----------
+adjf            adjective or adverb comparatives or ...
+amorph          adjective morphological segment
+au              authority/author
+bio             marks biography
+biography       same as bio
+booki           marks the name of book/pamphlet/document
+branchof        field of knowledge
+cas
+causes          infectious disease
+causesp
+causedby
+causedbyp
+cd2             similar to <def2>
+centered        centered; usually to denote starting of an alphabet
+chformi         same as <chform>, but not ...
+chname          chemical name
+city
+cnvto
+colp            collocation in plain-font
+comm            comment (similar to note but inline)
+company
+compof          composed of
+conjf           the conjugated (non-infinitive) forms of verbs
+conseq          consequence
+consof          consequence of
+contains        an object contained within headword
+contxt          context of usage, outside definition
+corpn
+corr
+country
+cp              colloation, plain text
+ct              same as colf
+date
+datey           date with year
+decf            declension form
+divof           a division of headword
+ecol            embedded collocation
+ent             entry field
+etsep           etymological source person/location
+examp
+figcap          figure caption
+figtitle
+figure
+film
+fr              frequency of use
+fu              first use (a date)
+edi             education institution
+emits           radiation-emitting?
+geog            geographical region
+grp
+h2
+hascons         same as <conseq>
+headrow         row title in table
+hwf             headword-font; appears only in "K"
+hypen           hypernym from WordNet 1.5
+illu            illustrative usage
+illust          figure/illustration
+img
+intensi         intensified form
+inv
+isa             supertype (hypernym like hypen)
+itran           translation
+itrans          same as itran
+jour            title of a journal
+markp           usage mark in plain font
+member
+members
+membof
+method
+methodfo
+mitem           items in a table
+mstypec         multiple synonymous subtypes
+mtable          multiple tables
+nmorph          noun morphology
+org
+partof          something that headword is conceptually part of
+parts           same as <part>, plural
+perf            performs
+persfn
+person
+point*          point-size of font
+pr              pronunciation
+pre
+prod
+prodby
+prodmac
+prodp
+publ
+q               quotation
+qau             quotation author
+qex             quotation example
+qpers           quotation person
+qperson
+qperson         same as qpers
+qua             right-justified <au>
+recipr          reciprocal
+refs            references as in biography (very different from <ref>)
+river
+sfield          subfield
+ship
+sig             significance
+simto           similar to
+sn              sense number (<b> is used in its place)
+source          source/author of definition
+specif          specifically
+stage
+stageof
+state           geopolitical state
+str
+styp            same as <stype>, in plain text
+sub             subscript
+sup             superscript
+stypec
+<table> <ttitle> <coltitle> <tabtitle> <title> <colheads> <vertical> <column 1>
+td              table datum
+th              table header
+tradename
+tr              translation of the preceding word
+tran            word translated
+<antiquetype> <blacklettertype> <boldfacetype> <clarendontype> <frenchelzevirtype>
+<longprimertype> <oldenglishtype> <oldstyletype> <scripttype> <typewritertype>
+<bourgeoistype> <englishtype> <extendedtype> <germantype> <gothictype>
+<greatprimertype> <miniontype> <nonpareiltype> <pearltype> <picatype> <smpicatype>
+unit            unit of measure
+uses
+usedfor
+usedby
+ver             verified
+vmorph          verb morphology
+w16ns           WordNet 1.6 sense
+wnote           note related to WordNet def
+wns             WordNet sense
+<! .. !>        HTML-style comment [not!]

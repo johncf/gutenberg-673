@@ -1,0 +1,92 @@
+>> Originally, 673.txt used Windows-1252 encoding with CRLF line-endings.
+>> It was converted to UTF-8 with LF line-endings for easier handling.
+>> Below, in any cell, a dot (.) means empty.
+
+Escape Entity    SGML-name    UTF-8    TeX              ASCII Comments
+\'3c   .         lt           U+003C   $<$              <     less than
+\'3e   .         gt           U+003E   $>$              >     greater than
+\'80   <Cced/    Ccedil       U+00C7   \c{C}            C     C cedilla
+\'81   <uum/     uuml         U+00FC   \"u              ue    u umlaut (diaeresis)
+\'82   <eacute/  eacute       U+00E9   \'e              e     e acute
+\'83   <acir/    acirc        U+00E2   \^a              a     a circumflex
+\'84   <aum/     auml         U+00E4   \"a              ae    a umlaut (diaeresis)
+\'85   <agrave/  agrave       U+00E0   \`a              a     a grave
+\'86   <aring/   aring        U+00E5   \aa              a     a ring above
+\'87   <cced/    ccedil       U+00E7   \c{c}            c     c cedilla
+\'88   <ecir/    ecirc        U+00EA   \^e              e     e circumflex
+\'89   <eum/     euml         U+00EB   \"e              e     e umlaut (diaeresis)
+\'8a   <egrave/  egrave       U+00E8   \`e              e     e grave
+\'8b   <ium/     iuml         U+00EF   \"i              i     i umlaut (diaeresis)
+\'8c   <icir/    icirc        U+00EE   \^i              i     i circumflex
+\'8d   <igrave/  igrave       U+00EC   \`i              i     i grave
+\'8e   <Aum/     Auml         U+00C4   .                A     A umlaut
+\'90   <Eacute/  Eacute       U+00C9   \'E              e     E acute
+\'91   <ae/      aelig        U+00E6   \ae              ae    ligature ae
+\'92   <AE/      AElig        U+00C6   \AE              AE    ligature AE
+\'93   <ocir/    ocirc        U+00F4   \^o              o     o circumflex
+\'94   <oum/     ouml         U+00F6   \"o              oe    o umlaut (diaeresis)
+\'95   <ograve/  ograve       U+00F2   \`o              o     o grave
+\'96   <ucir/    ucirc        U+00FB   \^u              u     u circumflex
+\'97   <ugrave/  ugrave       U+00F9   \`u              u     u grave
+\'98   <yum/     yuml         U+00FF   .                y     y umlaut
+\'99   <Oum/     Ouml         U+00D6   .                O     O umlaut
+\'9a   <Uum/     Uuml         U+00DC   \"U              U     U umlaut (diaeresis)
+\'9c   <pound/   pound        U+00A3   \pounds          *     pound sign (British)
+\'a0   <aacute/  aacute       U+00E1   \'a              a     a acute
+\'a1   <iacute/  iacute       U+00ED   \'i              i     i acute
+\'a2   <oacute/  oacute       U+00F3   \'o              o     o acute
+\'a3   <uacute/  uacute       U+00FA   \'u              u     u acute
+\'a4   <ntil/    ntilde       U+00F1   \~n              ny    n tilde
+\'a5   <Ntil/    Ntilde       U+00D1   .                NY    N tilde
+\'a6   <frac23/  .            .        $\frac{2}{3}$    2/3   two-thirds
+\'a7   <frac13/  .            .        $\frac{1}{3}$    1/3   one-third
+\'a9   <sec/     Prime        U+2033   .                .     seconds (of arc or time)
+\'ab   <frac12/  .            .        $\frac{1}{2}$    1/2   one-half
+\'ac   <frac14/  .            .        $\frac{1}{4}$    1/4   one-quarter
+\'b0   <?/       .            U+FFFD   .                (?)   Place-holder
+\'b5   <hand/    .            .        .                *     pointing hand (printer's fist)
+\'b6   <bprime/  .            .        \"{}             ''    bold accent
+\'b7   <prime/   prime        U+2032   \'{}             '     light accent or minutes (of arc or time)
+\'b8   <rdquo/   rdquo        U+201D   ''               "     close double quote
+\'bc   <sect/    sect         U+00A7   \S               *     section mark
+\'bd   <ldquo/   ldquo        U+201C   ``               "     open double quotes
+\'be   <amac/    amacr*       U+0101   \=a              a     a macron
+\'bf   <lsquo/   lsquo        U+2018   `                `     left single quote
+\'c0   <nsm/     .            .        .                ng    "n sub-macron"
+\'c1   <sharp/   sharp*       U+266F   $\sharp$         #     musical sharp
+\'c2   <flat/    flat*        U+266D   $\flat$          *     musical flat
+\'c3   .         .            .        --               --    long (en?) dash (appears twice)
+\'c6   <imac/    imacr*       U+012B   \=i              i     i macron
+\'c7   <emac/    emacr*       U+0113   \=e              e     e macron
+\'c8   <dsdot/   .            .        .                d     Sanskrit/Tamil d dot
+\'c9   <nsdot/   .            .        .                n     Sanskrit/Tamil n dot
+\'ca   <tsdot/   .            .        .                t     Sanskrit/Tamil t dot
+\'cb   <ecr/     .            U+0115   \u{e}            e     e breve
+\'cc   <icr/     .            U+012D   \u{i}            i     i breve
+\'ce   <ocr/     .            U+014F   \u{o}            o     o breve
+\'cf   -         .            U+2013   --               -     short dash
+\'d0   --        mdash        U+2014   ---              --    long (em) dash (appears once)
+\'d1   <OE/      OElig        U+0152   \OE              OE    OE ligature
+\'d2   <oe/      oelig        U+0153   \oe              oe    oe ligature
+\'d3   <omac/    omacr*       U+014D   \=o              o     o macron
+\'d4   <umac/    umacr*       U+016B   \=u              u     u macron
+\'d5   <ocar/    .            U+01D2   \v{o}            o     o hacek
+\'d6   <aemac/   .            U+01E3   \=\ae            ae    ae ligature macron
+\'d7   <oemac/   .        U+0153 U+0304  \=\oe          oe    oe ligature macron
+\'d8   .         par*         U+2225   $\parallel$      ||    double vertical bar(s)
+\'dc   <ucr/     ubreve*      U+016D   \u{u}            u     u breve
+\'dd   <acr/     abreve*      U+0103   \u{a}            a     a breve
+\'de   <cre/     ssmile*      U+02d8   \u{}             ~     crescent
+\'df   <ymac/    .            U+0233   \=y              y     y macron
+\'eb   <edh/     .            .        .                th    small eth
+\'ed   <thorn/   thorn        U+00FE   .                th    small thorn
+\'ee   <atil/    atilde       U+00E3   \~a              a     a tilde
+\'ef   <ndot/    .            .        .                n     n with dot above
+\'f0   <rsdot/   .            .        \d{r}            r     r with a dot below
+\'f4   <yogh/    .            .        .                y     small yogh
+\'f5   <mdash/   mdash        U+2014   ---              --    em dash (appears once)
+\'f6   <divide/  divide       U+00F7   $\div$           /     division sign
+\'f7   .         ap*          U+2248   $\approx$        ~=    double tilde
+\'f8   <deg/     deg          U+00B0   ${}^\circ$       *     degree sign
+\'f9   <middot/  .            U+2022   $\bullet$        *     bold middle dot
+\'fb   <root/    radic        U+221A   $\surd$          *     root sign
