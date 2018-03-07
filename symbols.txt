@@ -1,3 +1,6 @@
+>> Within the hw field the heavy accent is represented by double quote ("), the
+.. light accent by open-single-quote (`), and the short dash separating
+.. syllables by an asterisk (*).
 >> Originally, 673.txt used Windows-1252 encoding with CRLF line-endings.
 >> It was converted to UTF-8 with LF line-endings for easier handling.
 >> Below, in any cell, a dot (.) means empty.
