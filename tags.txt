@@ -5,7 +5,8 @@ as              example (as in); always inside <def>
 ant             antonym word; always inside <def>
 p               Paragraph tag; closed only once! never in collocations
                 Useful in identifying the beginning of first definition <b>1.</b>.
-def2            a second/thrid definition
+def2            a second/thrid definition (always(?) a different wordform;
+                replace with wordform tags?)
 
 col             collocation (should be indexed)
 mcol            multiple collocations, usually those that share a definition
