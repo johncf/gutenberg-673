@@ -81,6 +81,7 @@ Escape Entity    SGML-name    UTF-8    TeX              ASCII Comments
 \'dd   <acr/     abreve*      U+0103   \u{a}            a     a breve
 \'de   <cre/     ssmile*      U+02d8   \u{}             ~     crescent
 \'df   <ymac/    .            U+0233   \=y              y     y macron
+\'e2   <isl/     .            U+021B   .                .     i "semilong"
 \'eb   <edh/     .            .        .                th    small eth
 \'ed   <thorn/   thorn        U+00FE   .                th    small thorn
 \'ee   <atil/    atilde       U+00E3   \~a              a     a tilde
@@ -93,3 +94,4 @@ Escape Entity    SGML-name    UTF-8    TeX              ASCII Comments
 \'f8   <deg/     deg          U+00B0   ${}^\circ$       *     degree sign
 \'f9   <middot/  .            U+2022   $\bullet$        *     bold middle dot
 \'fb   <root/    radic        U+221A   $\surd$          *     root sign
+.      <ycr/     .            U+045E   \u{y}            y     y breve
